@@ -31,6 +31,11 @@ genfstab -p /mnt >> /mnt/etc/fstab
 arch-chroot /mnt
 ```
 
+## 修改root密码
+```
+passwd
+```
+
 ## 安装sudo
 ```
 pacman -S sudo

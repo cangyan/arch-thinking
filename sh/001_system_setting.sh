@@ -17,3 +17,9 @@ usermod -G sudo mingfeng && \
 
 # 下载grub及配置
 pacman -S grub-bios --noconfirm && grub-install /dev/sda && grub-mkconfig -o /boot/grub/grub.cfg && \
+
+
+mkinitcpio -p linux && \
+
+
+echo "system setting done!!!"
