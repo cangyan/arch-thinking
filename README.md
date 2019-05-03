@@ -62,3 +62,31 @@ pacman -S git openssh
 ```
 git clone https://github.com/cangyan/arch-thinking.git
 ```
+
+# wifi自动连接注意
+## 用wifi-menu生成配置文件
+## 安装包
+```
+pacman -S netctl wireless_tools
+```
+## 生成加密key
+```
+wpa_passphrase SSID
+输入key
+network={
+  ssid="your_essid"
+  #psk="passphrase"
+  psk=64cf3ced850ecef39197bb7b7b301fc39437a6aa6c6a599d0534b16af578e04a
+}
+将psk回写与配置文件中
+```
+## 报错时禁用服务
+```
+systemctl disable dhcpcd.service systemd-networkd.service && reboot
+```
+
+## 设置开机启动
+```
+systemctl start netctl-auto@wlp3s0.service
+systemctl enable netctl-auto@wlp3s0.service
+```
