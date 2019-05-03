@@ -8,7 +8,7 @@ mkdir -p ~/.config/i3/i3blocks && sudo cp /etc/i3blocks.conf ~/.config/i3/i3bloc
 
 cp $PWD/../urxvt/Xresources ~/.Xresources && \
 
-echo "set preview_image true" > ~/.config/ranger/rc.conf && \
+echo "set preview_images true" > ~/.config/ranger/rc.conf && \
 
 if [ ! -d "~/.urxvt/ext" ]; then
     mkdir -p ~/.urxvt/ext
