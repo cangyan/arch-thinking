@@ -8,7 +8,11 @@ echo $HOST_NAME > /etc/hostname && \
 ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
 
 # 设置locale
-locale-gen && \
+echo "LANG=en_US.UTF-8" > /etc/locale.conf && echo "LC_CTYPE=zh_CN.UTF-8" >> /etc/locale.conf && \
+
+echo "en_US.UTF-8 UTF-8" > /etc/locale.gen && echo "zh_CN.UTF-8 UTF-8" >> /etc/locale.gen && \
+
+export LANG=en_US.UTF-8 && export LC_TYPE=zh_CN.UTF-8 && locale-gen && \
 
 # 创建用户
 useradd -m -g users -s /bin/bash $USER_NAME && passwd $USER_NAME && \

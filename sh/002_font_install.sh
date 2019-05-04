@@ -7,4 +7,8 @@ if [ ! -d "/usr/share/fonts/TTF" ]; then
 fi && \
 
 
-sudo cp /tmp/ttf/* /usr/share/fonts/TTF && sudo fc-cache -f -v
+sudo cp /tmp/ttf/* /usr/share/fonts/TTF && sudo fc-cache -f -v && \
+
+sudo pacman -S noto-fonts-cjk --noconfirm && \
+
+echo "字段安装结束"
