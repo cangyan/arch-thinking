@@ -18,7 +18,7 @@ Server = http://mirrors.tuna.tsinghua.edu.cn/archlinux/$repo/os/$arch
 
 ## 安装系统
 ```
-pacstrap /mnt base
+pacstrap /mnt base base-devel
 ```
 
 ## 生成fstab信息
