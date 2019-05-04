@@ -17,8 +17,8 @@ function echo_battery() {
 }
 
 function get_battery() {
-  [[ -e '/sys/class/power_supply/BAT1/capacity' ]] \
-    && cat '/sys/class/power_supply/BAT1/capacity' \
+  [[ -e '/sys/class/power_supply/BAT0/capacity' ]] \
+    && cat '/sys/class/power_supply/BAT0/capacity' \
     || echo 0
 }
 
