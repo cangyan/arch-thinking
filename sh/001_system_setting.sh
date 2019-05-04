@@ -33,5 +33,6 @@ git clone https://aur.archlinux.org/yay.git && \
 
 cd yay && makepkg -si && \
 
+pacman -S pulseaudio --noconfirm && pulseaudio && \
 
 echo "system setting done!!!"
